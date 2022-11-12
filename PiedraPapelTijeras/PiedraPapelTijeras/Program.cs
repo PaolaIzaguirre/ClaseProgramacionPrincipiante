@@ -14,8 +14,8 @@ namespace PiedraPapelTijeras
 			int select;
 
 			select = r.Next(1, 4);
-			Console.WriteLine("************ Selecccione opcion ************");
 			Console.WriteLine(select);
+			Menu();
 			int seleccion_usuario = int.Parse(Console.ReadLine());
 			Console.WriteLine(String.Format("usuario: {0}, computadora: {1}", seleccion_usuario, select));
 
@@ -55,6 +55,25 @@ namespace PiedraPapelTijeras
 			}
 			Console.ReadLine();
 		}
+
+		#region Metodos privados
+
+		/// <summary>
+		/// Funcion que muestra el menu de opciones en pantalla
+		/// </summary>
+		private static void Menu(){
+			Console.WriteLine("--------------------------------------");
+			Console.WriteLine("---------Bienvenido al Juego----------");
+			Console.WriteLine("--------------------------------------");
+
+			Console.WriteLine("Opcion 1. Piedra");
+			Console.WriteLine("Opcion 2. Papel");
+			Console.WriteLine("Opcion 3. Tijera");
+
+			Console.WriteLine("Por favor, seleccione una de las opciones.");
+		}
+
+		#endregion
 
 	}
 }
